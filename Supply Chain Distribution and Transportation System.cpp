@@ -1,8 +1,13 @@
 #include <iostream>
 #include "headers/showMainMenu.h"
+#include "headers/generateRetailerSites.h"
 using namespace std;
 
 int main(){
+
+    RetailerSites r;
+    r.displayRetailerSites();
+    r.saveToFile();
 
     int optionSelected;
     bool programIsRunning=true;

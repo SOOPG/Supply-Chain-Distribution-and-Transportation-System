@@ -1,12 +1,12 @@
 #include <iostream>
-#ifndef showMainMenu_H_Included
-#define showMainMenu_H_Included
+#ifndef SHOWMAINMENU_H_INCLUDED
+#define SHOWMAINMENU_H_INCLUDED
 using namespace std;
 
 int showMainMenu(){
 
     int option;
-    double goodsWeight;
+    double goodsWeightInput;
 
         cout<<"______________________________"<<endl;
         cout<<"Welcome to Supply Chain System"<<endl;
@@ -14,7 +14,7 @@ int showMainMenu(){
         cout<<"Please select your option:"<<endl;
         cout<<"1.Regular(Non-optimized) Route (Min 50KG)"<<endl;
         cout<<"2.Optimized Route (Min 100KG)" <<endl;
-        cout<<"3.Greedy Route"<<endl;
+        cout<<"3.Greedy Route (No Minimum Weight)"<<endl;
         cout<<"4.Exit"<<endl;
         cout<<"______________________________"<<endl;
         cout<<"Option:";
@@ -33,4 +33,4 @@ int showMainMenu(){
     return option;
 }
 
-#endif // showMainMenu.h included
+#endif // SHOWMAINMENU_H_INCLUDED
