@@ -10,51 +10,55 @@
 
 using namespace std;
 
+void deleteAdditionalRetailLocation(){
+
+}
+
 class RetailerSites{
 
 private:
     std::string locations[10];
     double goodsWeight[10];
-    int distancesFromHQ[10];
+    int distancesFromSupplierHQ[10];
     int retailerConnectedToDistance[10];
     string retailerConnectedTo[10];
 
 
 public:
     RetailerSites(){
-        locations[0] = "Retailer A";
-        locations[1] = "Retailer B";
-        locations[2] = "Retailer C";
-        locations[3] = "Retailer D";
-        locations[4] = "Retailer E";
-        locations[5] = "Retailer F";
-        locations[6] = "Retailer G";
-        locations[7] = "Retailer H";
-        locations[8] = "Retailer I";
-        locations[9] = "Retailer J";
+        locations[0] = "Retailer 1";
+        locations[1] = "Retailer 2";
+        locations[2] = "Retailer 3";
+        locations[3] = "Retailer 4";
+        locations[4] = "Retailer 5";
+        locations[5] = "Retailer 6";
+        locations[6] = "Retailer 7";
+        locations[7] = "Retailer 8";
+        locations[8] = "Retailer 9";
+        locations[9] = "Retailer 10";
 
-        distancesFromHQ[0] = 15;
-        distancesFromHQ[1] = 20;
-        distancesFromHQ[2] = 30;
-        distancesFromHQ[3] = 50;
-        distancesFromHQ[4] = 45;
-        distancesFromHQ[5] = 70;
-        distancesFromHQ[6] = 55;
-        distancesFromHQ[7] = 50;
-        distancesFromHQ[8] = 40;
-        distancesFromHQ[9] = 20;
+        distancesFromSupplierHQ[0] = 15;
+        distancesFromSupplierHQ[1] = 20;
+        distancesFromSupplierHQ[2] = 30;
+        distancesFromSupplierHQ[3] = 50;
+        distancesFromSupplierHQ[4] = 45;
+        distancesFromSupplierHQ[5] = 70;
+        distancesFromSupplierHQ[6] = 55;
+        distancesFromSupplierHQ[7] = 50;
+        distancesFromSupplierHQ[8] = 40;
+        distancesFromSupplierHQ[9] = 20;
 
         // Retailers Connected To Retailer[] by skipping other retailer distance
-        retailerConnectedTo[0] = "C";//15km;
-        retailerConnectedTo[1] = "E";//25km;
-        retailerConnectedTo[2] = "E";//15km;
-        retailerConnectedTo[3] = "F";//30km;
-        retailerConnectedTo[4] = "H";//45km;
-        retailerConnectedTo[5] = "H";//20km;
-        retailerConnectedTo[6] = "I";//15km;
-        retailerConnectedTo[7] = "J";//30km;
-        retailerConnectedTo[8] = "G";//15km;
-        retailerConnectedTo[9] = "H";//30km;
+        retailerConnectedTo[0] = "3";//15km;
+        retailerConnectedTo[1] = "5";//25km;
+        retailerConnectedTo[2] = "5";//15km;
+        retailerConnectedTo[3] = "6";//30km;
+        retailerConnectedTo[4] = "8";//45km;
+        retailerConnectedTo[5] = "8";//20km;
+        retailerConnectedTo[6] = "9";//15km;
+        retailerConnectedTo[7] = "10";//30km;
+        retailerConnectedTo[8] = "7";//15km;
+        retailerConnectedTo[9] = "8";//30km;
 
         retailerConnectedToDistance[0] = 15;
         retailerConnectedToDistance[1] = 25;
@@ -75,10 +79,50 @@ public:
         }
     }
 
-    void displayRetailerSites() {
-    std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
-    for (int i = 0; i < 10; i++) {
-            std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
+    void displayRetailerSites(int route) {
+        std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
+        int locationsOnList=0;
+        int locationToDelete1;
+        int locationToDelete2;
+        if (route==1){
+            for (int i = 0; i < 10; i++) {
+                if (goodsWeight[i]>=50){
+                std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
+                locationsOnList++;
+                }
+            }
+            if (locationsOnList>9){
+                std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
+                cout<<"Over 8 Location! Select 2 retail numbers you wish to delete:";
+                cin>>locationToDelete1;
+                cin>>locationToDelete2;
+                system("CLS");
+                cout<<flush;
+
+                for (int i = 0; i < 10; i++) {
+                        if (i!=locationToDelete1-1 || i!=locationToDelete2-1)
+                            if (goodsWeight[i]>=50)
+                            std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
+                }
+            }
+
+            else if (locationsOnList==9){
+                std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
+                cout<<"Over 8 Location! Select 1 retail number you wish to delete:";
+                cin>>locationToDelete1;
+                system("CLS");
+                cout<<flush;
+                for (int i = 0; i < 10; i++) {
+                        if (i!=locationToDelete1-1)
+                            if (goodsWeight[i]>=50)
+                            std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
+                }
+            }
+        }
+        else {
+            for (int i = 0; i < 10; i++) {
+                std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
+            }
         }
     }
 
@@ -87,7 +131,7 @@ public:
         if (file.is_open()) {
             file << "Retailer Locations, Goods Weight, and Distance from HQ List: " << std::endl;
             for (int i = 0; i < 10; i++) {
-                file << "Location: " << locations[i] << ", Weight: " << goodsWeight[i] << "kg, Distance from HQ: " << distancesFromHQ[i] << "km, Retailer Connected: " << retailerConnectedTo[i] << std::endl;
+                file << "Location: " << locations[i] << ", Weight: " << goodsWeight[i] << "kg, Distance from HQ: " << distancesFromSupplierHQ[i] << "km, Retailer Connected: " << retailerConnectedTo[i] << std::endl;
             }
             file.close();
         } else {

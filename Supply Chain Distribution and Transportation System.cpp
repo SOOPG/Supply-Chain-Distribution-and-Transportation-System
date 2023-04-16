@@ -15,7 +15,7 @@ int main(){
 
         system("CLS");
         cout<<flush;
-        r.displayRetailerSites();
+        r.displayRetailerSites(0);
         optionSelected=showMainMenu();
 
         switch (optionSelected) {

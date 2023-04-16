@@ -13,7 +13,7 @@ void selectedNonOptimizedRoute(RetailerSites r){
     system("CLS");
     cout<<flush;
 
-    retailerList.displayRetailerSites();
+    retailerList.displayRetailerSites(1);
 
     cout<<"____________________________________________________________"<<endl;
     cout<<"Do you wish to approve this route to be used by driver?[Y/N]"<<endl;
