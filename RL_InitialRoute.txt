@@ -1,11 +1,11 @@
 Retailer Locations, Goods Weight, and Distance from HQ List: 
-Location: Retailer A, Weight: 351kg, Distance from HQ: 15km, Retailer Connected: C
-Location: Retailer B, Weight: 199kg, Distance from HQ: 20km, Retailer Connected: E
-Location: Retailer C, Weight: 430kg, Distance from HQ: 30km, Retailer Connected: E
-Location: Retailer D, Weight: 445kg, Distance from HQ: 50km, Retailer Connected: F
-Location: Retailer E, Weight: 204kg, Distance from HQ: 45km, Retailer Connected: H
-Location: Retailer F, Weight: 363kg, Distance from HQ: 70km, Retailer Connected: H
-Location: Retailer G, Weight: 40kg, Distance from HQ: 55km, Retailer Connected: I
-Location: Retailer H, Weight: 382kg, Distance from HQ: 50km, Retailer Connected: J
-Location: Retailer I, Weight: 302kg, Distance from HQ: 40km, Retailer Connected: G
-Location: Retailer J, Weight: 306kg, Distance from HQ: 20km, Retailer Connected: H
+Location: Retailer A, Weight: 41kg, Distance from HQ: 15km, Retailer Connected: C
+Location: Retailer B, Weight: 183kg, Distance from HQ: 20km, Retailer Connected: E
+Location: Retailer C, Weight: 375kg, Distance from HQ: 30km, Retailer Connected: E
+Location: Retailer D, Weight: 380kg, Distance from HQ: 50km, Retailer Connected: F
+Location: Retailer E, Weight: 391kg, Distance from HQ: 45km, Retailer Connected: H
+Location: Retailer F, Weight: 380kg, Distance from HQ: 70km, Retailer Connected: H
+Location: Retailer G, Weight: 124kg, Distance from HQ: 55km, Retailer Connected: I
+Location: Retailer H, Weight: 95kg, Distance from HQ: 50km, Retailer Connected: J
+Location: Retailer I, Weight: 78kg, Distance from HQ: 40km, Retailer Connected: G
+Location: Retailer J, Weight: 342kg, Distance from HQ: 20km, Retailer Connected: H

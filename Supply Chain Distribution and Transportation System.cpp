@@ -1,22 +1,26 @@
 #include <iostream>
 #include "headers/showMainMenu.h"
 #include "headers/generateRetailerSites.h"
+#include "headers/selectedNonOptimizedRoute.h"
 using namespace std;
 
 int main(){
 
     RetailerSites r;
-    r.displayRetailerSites();
     r.saveToFile();
 
     int optionSelected;
     bool programIsRunning=true;
     while (programIsRunning){
+
+        system("CLS");
+        cout<<flush;
+        r.displayRetailerSites();
         optionSelected=showMainMenu();
 
         switch (optionSelected) {
           case 1:
-            cout <<"Monday"<<endl;
+            selectedNonOptimizedRoute(r);
             break;
           case 2:
             cout <<"Tuesday"<<endl;
@@ -31,6 +35,7 @@ int main(){
           default:
               if (optionSelected<1 || optionSelected>4)
             throw std::invalid_argument("Option input only between 1-4");
+            cout<<""<<endl;
         }
     }
     return 0;
