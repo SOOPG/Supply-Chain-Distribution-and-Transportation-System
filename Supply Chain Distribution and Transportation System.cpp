@@ -9,6 +9,7 @@ int main(){
 
     RetailerSites r;
     r.saveToFile();
+    OptimizedRoute optimizedRoute;
 
     int optionSelected;
     bool programIsRunning=true;
@@ -28,7 +29,7 @@ int main(){
           case 2:
             system("CLS");
             cout<<flush;
-            selectedOptimizedRoute(r);
+            selectedOptimizedRoute(r, optimizedRoute);
             break;
           case 3:
             cout <<"Wednesday"<<endl;
