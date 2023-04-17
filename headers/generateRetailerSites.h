@@ -132,7 +132,7 @@ public:
         if (file.is_open()) {
             file << "Retailer Locations, Goods Weight, and Distance from HQ List: " << std::endl;
             for (int i = 0; i < 10; i++) {
-                file << "Location: " << locations[i] << ", Weight: " << goodsWeight[i] << "kg, Distance from HQ: " << distancesFromSupplierHQ[i] << "km, Retailer Connected: " << retailerConnectedTo[i] << std::endl;
+                file << "Location: " << locations[i] << ", Weight: " << goodsWeight[i] << "kg, Distance from HQ: " << distancesFromSupplierHQ[i] << "km, Retailer Connected: " << retailerConnectedTo[i]<<", Distance To Retailer:" << retailerConnectedToDistance[i]<<"km"<<std::endl;
             }
             file.close();
         } else {
