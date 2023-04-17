@@ -10,21 +10,15 @@
 
 using namespace std;
 
-void deleteAdditionalRetailLocation(){
-
-}
-
 class RetailerSites{
 
-private:
+public:
     std::string locations[10];
     double goodsWeight[10];
     int distancesFromSupplierHQ[10];
     int retailerConnectedToDistance[10];
     string retailerConnectedTo[10];
 
-
-public:
     RetailerSites(){
         locations[0] = "Retailer 1";
         locations[1] = "Retailer 2";

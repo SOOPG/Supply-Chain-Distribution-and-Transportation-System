@@ -15,7 +15,8 @@ void selectedNonOptimizedRoute(RetailerSites r){
 
     cout<<"____________________________________________________________"<<endl;
     cout<<"Do you wish to approve this route to be used by driver?[Y/N]"<<endl;
-    cout<<"Enter 'Y' or 'y' for Confirm & 'N' or 'n' for Decline"<<endl;
+    cout<<"Enter 'Y' or 'y' for Confirm"<<endl;
+    cout<<"Enter 'N' or 'n' for Decline"<<endl;
     cin>>routeApproval;
     cout<<"____________________________________________________________"<<endl;
 

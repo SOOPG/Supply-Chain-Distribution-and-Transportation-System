@@ -6,12 +6,35 @@
 #include "generateRetailerSites.h"
 using namespace std;
 
+void displayOptimizeRoute(RetailerSites retailerBeforeFilterRoute){
+
+        RetailerSites retailerList=retailerBeforeFilterRoute;
+
+        std::cout << std::left << std::setw(20)
+        << "Location" << std::setw(20)
+        << "Weight (kg)" << std::setw(30)
+        << "Distance from HQ (km)" << std::setw(30)
+        <<  "Retailer Connected:"
+        << "Distance (km):" <<std::endl;
+        for (int i = 0; i < 10; i++) {
+                if(retailerBeforeFilterRoute.goodsWeight[i]>=100 && retailerBeforeFilterRoute.distancesFromSupplierHQ[i]<=30){
+                    std::cout << std::left << std::setw(23)
+                    << retailerBeforeFilterRoute.locations[i] << std::setw(25) << retailerBeforeFilterRoute.goodsWeight[i] << std::setw(30)
+                    << retailerBeforeFilterRoute.distancesFromSupplierHQ[i] << std::setw(27) << retailerBeforeFilterRoute.retailerConnectedTo[i]
+                    << retailerBeforeFilterRoute.retailerConnectedToDistance[i]<< std::endl;
+                }
+            }
+    }
+
 void selectedOptimizedRoute(RetailerSites r){
 
-    RetailerSites retailerList = r;
+
+    OptimizedRoute routeAvailable = r;
     char routeApproval;
     system("CLS");
     cout<<flush;
+
+    routeAvailable.displayRouteDistance(retailerAvailable);
 
     cout<<"____________________________________________________________"<<endl;
     cout<<"Do you wish to approve this route to be used by driver?[Y/N]"<<endl;
@@ -28,5 +51,27 @@ void selectedOptimizedRoute(RetailerSites r){
     }
 
 }
+
+
+class OptimizedRoute{
+
+    public:
+        std::string locations[10];
+        double goodsWeight[10];
+        int distancesFromSupplierHQ[10];
+        int retailerConnectedToDistance[10];
+        string retailerConnectedTo[10];
+
+
+
+    OptimizedRoute(){
+
+    }
+
+    void displayRouteDistance(){
+
+        }
+
+};
 
 #endif // SELECTEDOPTIMIZEDPATH_H_INCLUDED

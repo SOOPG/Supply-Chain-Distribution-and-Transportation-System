@@ -6,7 +6,6 @@ using namespace std;
 int showMainMenu(){
 
     int option;
-    double goodsWeightInput;
 
         cout<<"_________________________________________"<<endl;
         cout<<"Welcome to Supply Chain System"<<endl;
