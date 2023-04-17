@@ -15,7 +15,7 @@ int main(){
 
         system("CLS");
         cout<<flush;
-        r.displayRetailerSites(0);
+        r.displayRetailerSitesInMainMenu();
         optionSelected=showMainMenu();
 
         switch (optionSelected) {
@@ -24,6 +24,14 @@ int main(){
             break;
           case 2:
             cout <<"Tuesday"<<endl;
+            system("CLS");
+            cout<<flush;
+            selectedNonOptimizedRoute(r);
+            break;
+          case 2:
+            system("CLS");
+            cout<<flush;
+            selectedOptimizedRoute(r);
             break;
           case 3:
             cout <<"Wednesday"<<endl;

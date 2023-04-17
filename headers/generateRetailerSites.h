@@ -79,12 +79,19 @@ public:
         }
     }
 
-    void displayRetailerSites(int route) {
+    void displayRetailerSitesInMainMenu(){
+    std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
+    for (int i = 0; i < 10; i++) {
+                std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
+            }
+    }
+
+    void displayRetailerSitesUnoptimized() {
         std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
         int locationsOnList=0;
         int locationToDelete1;
         int locationToDelete2;
-        if (route==1){
+
             for (int i = 0; i < 10; i++) {
                 if (goodsWeight[i]>=50){
                 std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
@@ -100,9 +107,10 @@ public:
                 cout<<flush;
 
                 for (int i = 0; i < 10; i++) {
-                        if (i!=locationToDelete1-1 || i!=locationToDelete2-1)
+                        if (i!=locationToDelete1-1 && i!=locationToDelete2-1)
                             if (goodsWeight[i]>=50)
                             std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
+
                 }
             }
 
@@ -118,12 +126,6 @@ public:
                             std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
                 }
             }
-        }
-        else {
-            for (int i = 0; i < 10; i++) {
-                std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
-            }
-        }
     }
 
     void saveToFile() {

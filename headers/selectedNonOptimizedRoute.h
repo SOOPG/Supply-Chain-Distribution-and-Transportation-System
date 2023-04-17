@@ -10,10 +10,8 @@ void selectedNonOptimizedRoute(RetailerSites r){
 
     RetailerSites retailerList = r;
     char routeApproval;
-    system("CLS");
-    cout<<flush;
 
-    retailerList.displayRetailerSites(1);
+    retailerList.displayRetailerSitesUnoptimized();
 
     cout<<"____________________________________________________________"<<endl;
     cout<<"Do you wish to approve this route to be used by driver?[Y/N]"<<endl;
