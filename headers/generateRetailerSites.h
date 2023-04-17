@@ -99,13 +99,12 @@ public:
                 }
             }
             if (locationsOnList>9){
-                std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
                 cout<<"Over 8 Location! Select 2 retail numbers you wish to delete:";
                 cin>>locationToDelete1;
                 cin>>locationToDelete2;
                 system("CLS");
                 cout<<flush;
-
+                std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
                 for (int i = 0; i < 10; i++) {
                         if (i!=locationToDelete1-1 && i!=locationToDelete2-1)
                             if (goodsWeight[i]>=50)
@@ -115,11 +114,11 @@ public:
             }
 
             else if (locationsOnList==9){
-                std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
                 cout<<"Over 8 Location! Select 1 retail number you wish to delete:";
                 cin>>locationToDelete1;
                 system("CLS");
                 cout<<flush;
+                std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
                 for (int i = 0; i < 10; i++) {
                         if (i!=locationToDelete1-1)
                             if (goodsWeight[i]>=50)

@@ -2,6 +2,7 @@
 #include "headers/showMainMenu.h"
 #include "headers/generateRetailerSites.h"
 #include "headers/selectedNonOptimizedRoute.h"
+#include "headers/selectedOptimizedRoute.h"
 using namespace std;
 
 int main(){
@@ -20,10 +21,6 @@ int main(){
 
         switch (optionSelected) {
           case 1:
-            selectedNonOptimizedRoute(r);
-            break;
-          case 2:
-            cout <<"Tuesday"<<endl;
             system("CLS");
             cout<<flush;
             selectedNonOptimizedRoute(r);
