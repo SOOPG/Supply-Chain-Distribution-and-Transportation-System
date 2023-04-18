@@ -20,9 +20,7 @@ public:
 
 };
 
-
-
-int displayOptimizedRoute(RetailerSites retailerBeforeFilterRoute) {
+int calculateOptimizedRoute(RetailerSites retailerBeforeFilterRoute) {
     cout << left << setw(20) << "Location"
          << setw(20) << "Weight (kg)"
          << setw(30) << "Distance from HQ (km)"
@@ -72,8 +70,7 @@ int displayOptimizedRoute(RetailerSites retailerBeforeFilterRoute) {
 
 void selectedOptimizedRoute(RetailerSites& r, OptimizedRoute& optimizedRoute) {
 
-    optimizedRoute.totalDistanceTravelled=displayOptimizedRoute(r); // add this line to display the retailer sites
-    cout<<"GAY:"<<optimizedRoute.totalDistanceTravelled;
+    optimizedRoute.totalDistanceTravelled=calculateOptimizedRoute(r); // add this line to display the retailer sites
 
     char routeApproval;
     cout << "Do you wish to approve this route to be used by driver?[Y/N]" << endl;
@@ -81,10 +78,10 @@ void selectedOptimizedRoute(RetailerSites& r, OptimizedRoute& optimizedRoute) {
     cin >> routeApproval;
 
     if(routeApproval=='Y' || routeApproval=='y'){
-        cout<< "Route Confirmed!";
+        cout<< "Route Confirmed!"<<endl;
         system ("PAUSE");
     }else if (routeApproval=='N' || routeApproval=='n'){
-        cout<< "Route Declined!";
+        cout<< "Route Declined!"<<endl;
         system ("PAUSE");
     }else{
     throw

@@ -1,11 +1,11 @@
 Retailer Locations, Goods Weight, and Distance from HQ List: 
-Location: Retailer 1, Weight: 327kg, Distance from HQ: 15km, Retailer Connected: 3, Distance To Retailer:15km
-Location: Retailer 2, Weight: 51kg, Distance from HQ: 20km, Retailer Connected: 5, Distance To Retailer:25km
-Location: Retailer 3, Weight: 31kg, Distance from HQ: 30km, Retailer Connected: 5, Distance To Retailer:15km
-Location: Retailer 4, Weight: 139kg, Distance from HQ: 50km, Retailer Connected: 6, Distance To Retailer:30km
-Location: Retailer 5, Weight: 399kg, Distance from HQ: 45km, Retailer Connected: 8, Distance To Retailer:45km
-Location: Retailer 6, Weight: 237kg, Distance from HQ: 70km, Retailer Connected: 8, Distance To Retailer:20km
-Location: Retailer 7, Weight: 444kg, Distance from HQ: 55km, Retailer Connected: 9, Distance To Retailer:15km
-Location: Retailer 8, Weight: 145kg, Distance from HQ: 50km, Retailer Connected: 10, Distance To Retailer:30km
-Location: Retailer 9, Weight: 352kg, Distance from HQ: 40km, Retailer Connected: 7, Distance To Retailer:15km
-Location: Retailer 10, Weight: 49kg, Distance from HQ: 20km, Retailer Connected: 8, Distance To Retailer:30km
+Location: Retailer 1, Weight: 202kg, Distance from HQ: 15km, Retailer Connected: 3, Distance To Retailer:15km
+Location: Retailer 2, Weight: 256kg, Distance from HQ: 20km, Retailer Connected: 5, Distance To Retailer:25km
+Location: Retailer 3, Weight: 362kg, Distance from HQ: 30km, Retailer Connected: 5, Distance To Retailer:15km
+Location: Retailer 4, Weight: 271kg, Distance from HQ: 50km, Retailer Connected: 6, Distance To Retailer:30km
+Location: Retailer 5, Weight: 447kg, Distance from HQ: 45km, Retailer Connected: 8, Distance To Retailer:45km
+Location: Retailer 6, Weight: 200kg, Distance from HQ: 70km, Retailer Connected: 8, Distance To Retailer:20km
+Location: Retailer 7, Weight: 472kg, Distance from HQ: 55km, Retailer Connected: 9, Distance To Retailer:15km
+Location: Retailer 8, Weight: 142kg, Distance from HQ: 50km, Retailer Connected: 10, Distance To Retailer:30km
+Location: Retailer 9, Weight: 435kg, Distance from HQ: 40km, Retailer Connected: 7, Distance To Retailer:15km
+Location: Retailer 10, Weight: 428kg, Distance from HQ: 20km, Retailer Connected: 8, Distance To Retailer:30km

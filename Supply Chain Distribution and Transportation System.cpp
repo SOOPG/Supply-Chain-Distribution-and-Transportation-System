@@ -3,6 +3,7 @@
 #include "headers/generateRetailerSites.h"
 #include "headers/selectedNonOptimizedRoute.h"
 #include "headers/selectedOptimizedRoute.h"
+#include "headers/selectedGreedyRoute.h"
 using namespace std;
 
 int main(){
@@ -10,6 +11,7 @@ int main(){
     RetailerSites r;
     r.saveToFile();
     OptimizedRoute optimizedRoute;
+    GreedyRoute greedyRoute;
 
     int optionSelected;
     bool programIsRunning=true;
@@ -32,7 +34,9 @@ int main(){
             selectedOptimizedRoute(r, optimizedRoute);
             break;
           case 3:
-            cout <<"Wednesday"<<endl;
+            system("CLS");
+            cout<<flush;
+            selectedGreedyRoute(r, greedyRoute);
             break;
           case 4:
             cout <<"Exiting Program..."<<endl;
