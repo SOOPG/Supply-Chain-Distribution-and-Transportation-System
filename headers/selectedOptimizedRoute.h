@@ -10,13 +10,7 @@ using namespace std;
 
 class OptimizedRoute {
 public:
-    string locations[10];
-    double goodsWeight[10];
-    int distancesFromSupplierHQ[10];
-    int retailerConnectedToDistance[10];
-    string retailerConnectedTo[10];
-    int totalDistanceTravelled=0;
-    string RetailerTravelled;
+    int totalDistanceTravelled;
 
 };
 
@@ -29,7 +23,7 @@ int calculateOptimizedRoute(RetailerSites retailerBeforeFilterRoute) {
 
     int first=0;
     int totalRetailDistanceTravel=0;
-    int totalDistanceTraveledFromHQ=0;
+    int totalDistanceTravelledFromHQ=0;
 
     for (int i = 0; i < 10; i++) {
         if (retailerBeforeFilterRoute.goodsWeight[i] >= 100 && retailerBeforeFilterRoute.distancesFromSupplierHQ[i] <= 30) {
@@ -40,7 +34,7 @@ int calculateOptimizedRoute(RetailerSites retailerBeforeFilterRoute) {
                  << retailerBeforeFilterRoute.retailerConnectedToDistance[i] << endl;
                  //Check if its first retail, if so add distance direct from HQ
                 if(first==0){
-                    totalDistanceTraveledFromHQ+=retailerBeforeFilterRoute.distancesFromSupplierHQ[i];
+                    totalDistanceTravelledFromHQ+=retailerBeforeFilterRoute.distancesFromSupplierHQ[i];
                     first++;
                 }
         }
@@ -61,16 +55,16 @@ int calculateOptimizedRoute(RetailerSites retailerBeforeFilterRoute) {
     cout << "Total Retail-to-Retail Distance Traveled: ";
     cout<<totalRetailDistanceTravel<< " km" << endl;
     //Actual Route
-    totalDistanceTraveledFromHQ=totalRetailDistanceTravel+totalDistanceTraveledFromHQ;
+    totalDistanceTravelledFromHQ=totalRetailDistanceTravel+totalDistanceTravelledFromHQ;
     cout << "Total Route Distance Traveled: ";
-    cout <<totalDistanceTraveledFromHQ<< " km" << endl;
+    cout <<totalDistanceTravelledFromHQ<< " km" << endl;
     cout<<"_______________________________________________________________"<<endl;
-    return totalDistanceTraveledFromHQ;
+    return totalDistanceTravelledFromHQ;
 }
 
 void selectedOptimizedRoute(RetailerSites& r, OptimizedRoute& optimizedRoute) {
 
-    optimizedRoute.totalDistanceTravelled=calculateOptimizedRoute(r); // add this line to display the retailer sites
+    optimizedRoute.totalDistanceTravelled=calculateOptimizedRoute(r); // Display the Total Distance Traveled
 
     char routeApproval;
     cout << "Do you wish to approve this route to be used by driver?[Y/N]" << endl;

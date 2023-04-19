@@ -8,6 +8,7 @@ using namespace std;
 
 int main(){
 
+    //Constructor
     RetailerSites r;
     r.saveToFile();
     OptimizedRoute optimizedRoute;
@@ -15,6 +16,8 @@ int main(){
 
     int optionSelected;
     bool programIsRunning=true;
+
+    //program is running
     while (programIsRunning){
 
         system("CLS");
@@ -36,7 +39,7 @@ int main(){
           case 3:
             system("CLS");
             cout<<flush;
-            selectedGreedyRoute(r, greedyRoute);
+            selectedGreedyRoute(r, greedyRoute, optimizedRoute);
             break;
           case 4:
             cout <<"Exiting Program..."<<endl;
@@ -44,6 +47,7 @@ int main(){
             break;
           default:
               if (optionSelected<1 || optionSelected>4)
+                //if user inputs other than 1,2,3,4
             throw std::invalid_argument("Option input only between 1-4");
             cout<<""<<endl;
         }

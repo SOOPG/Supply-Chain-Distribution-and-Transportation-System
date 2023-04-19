@@ -74,14 +74,19 @@ public:
     }
 
     void displayRetailerSitesInMainMenu(){
-    std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
+    std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)"
+    << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"
+    << "Distance (km):" <<std::endl;
     for (int i = 0; i < 10; i++) {
-                std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i] << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
+                std::cout << std::left << std::setw(23) << locations[i] << std::setw(25) << goodsWeight[i]
+                << std::setw(30) << distancesFromSupplierHQ[i] << std::setw(27) << retailerConnectedTo[i]<< retailerConnectedToDistance[i]<< std::endl;
             }
     }
 
     void displayRetailerSitesUnoptimized() {
-        std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)" << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"<< "Distance (km):" <<std::endl;
+        std::cout << std::left << std::setw(20) << "Location" << std::setw(20) << "Weight (kg)"
+        << std::setw(30) << "Distance from HQ (km)" << std::setw(30) <<  "Retailer Connected:"
+        << "Distance (km):" <<std::endl;
         int locationsOnList=0;
         int locationToDelete1;
         int locationToDelete2;
@@ -126,7 +131,9 @@ public:
         if (file.is_open()) {
             file << "Retailer Locations, Goods Weight, and Distance from HQ List: " << std::endl;
             for (int i = 0; i < 10; i++) {
-                file << "Location: " << locations[i] << ", Weight: " << goodsWeight[i] << "kg, Distance from HQ: " << distancesFromSupplierHQ[i] << "km, Retailer Connected: " << retailerConnectedTo[i]<<", Distance To Retailer:" << retailerConnectedToDistance[i]<<"km"<<std::endl;
+                file << "Location: " << locations[i] << ", Weight: " << goodsWeight[i] << "kg, Distance from HQ: "
+                << distancesFromSupplierHQ[i] << "km, Retailer Connected: " << retailerConnectedTo[i]<<", Distance To Retailer:"
+                << retailerConnectedToDistance[i]<<"km"<<std::endl;
             }
             file.close();
         } else {
